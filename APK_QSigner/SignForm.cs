@@ -73,7 +73,5 @@ namespace APK_QSigner
             }
         }
         #endregion
-
-        
     }
 }
