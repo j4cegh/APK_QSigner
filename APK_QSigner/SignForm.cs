@@ -35,6 +35,7 @@ namespace APK_QSigner
             browseLbl.ForeColor = Color.White;
         }
 #endregion
+
         private void browseLbl_Click(object sender, EventArgs e)
         {
             apkFileDialog = new OpenFileDialog();
