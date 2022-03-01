@@ -13,19 +13,18 @@ namespace APK_QSigner
         }
 
         #region On launch
-
-        
-
-        
         private void SignForm_Load(object sender, EventArgs e)
         {
-            Text = "APK QSigner";
-            var icon = ResourceManager.GetImageFromResources("icon");
-            Icon = ResourceManager.BitmapToIcon(icon);
-            BackColor = ColorTranslator.FromHtml("#171717");
-            dropHereAPK.ForeColor = Color.White;
-            browseLbl.ForeColor = Color.White;
-            signer = new UberApkSigner();
+            Threading.RunWithThread(() =>
+            {
+                Text = "APK QSigner";
+                var icon = ResourceManager.GetImageFromResources("icon");
+                Icon = ResourceManager.BitmapToIcon(icon);
+                BackColor = ColorTranslator.FromHtml("#171717");
+                dropHereAPK.ForeColor = Color.White;
+                browseLbl.ForeColor = Color.White;
+                signer = new UberApkSigner();
+            });
         }
         #endregion
         #region Enter/Leave animation for browseLbl
