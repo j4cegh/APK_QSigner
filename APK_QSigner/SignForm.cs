@@ -21,7 +21,6 @@ namespace APK_QSigner
             dropHereAPK.ForeColor = Color.White;
             browseLbl.ForeColor = Color.White;
             signer = new UberApkSigner();
-
         }
         
         #region Enter/Leave animation for browseLbl
