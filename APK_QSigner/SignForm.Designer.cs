@@ -71,6 +71,7 @@ namespace APK_QSigner
             this.Load += new System.EventHandler(this.SignForm_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.SignForm_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.SignForm_DragEnter);
+            this.DragLeave += new System.EventHandler(this.SignForm_DragLeave);
             this.ResumeLayout(false);
         }
 

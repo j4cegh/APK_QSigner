@@ -6,5 +6,6 @@
             @"https://github.com/patrickfav/uber-apk-signer/releases/download/v1.2.1/uber-apk-signer-1.2.1.jar";
 
         public const string outputDir = "signed";
+        public const string dropHereAPKDefault = "Drag and drop the APK here";
     }
 }

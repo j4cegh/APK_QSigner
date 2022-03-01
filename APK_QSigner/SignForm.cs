@@ -60,7 +60,14 @@ namespace APK_QSigner
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
                 e.Effect = DragDropEffects.Copy;
+                browseLbl.Visible = false;
+                dropHereAPK.Text = "Drop right here!";
             }
+        }
+        private void SignForm_DragLeave(object sender, EventArgs e)
+        {
+            browseLbl.Visible = true;
+            dropHereAPK.Text = Constants.dropHereAPKDefault;
         }
 
         private void SignForm_DragDrop(object sender, DragEventArgs e)
@@ -71,6 +78,8 @@ namespace APK_QSigner
                 signer.Sign(files[0], Constants.outputDir);
                 GC.Collect();
             }
+            dropHereAPK.Text = Constants.dropHereAPKDefault;
+            browseLbl.Visible = true;
         }
         #endregion
     }
