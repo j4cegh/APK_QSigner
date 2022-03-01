@@ -12,6 +12,11 @@ namespace APK_QSigner
             InitializeComponent();
         }
 
+        #region On launch
+
+        
+
+        
         private void SignForm_Load(object sender, EventArgs e)
         {
             Text = "APK QSigner";
@@ -22,7 +27,7 @@ namespace APK_QSigner
             browseLbl.ForeColor = Color.White;
             signer = new UberApkSigner();
         }
-        
+        #endregion
         #region Enter/Leave animation for browseLbl
         private void browseLbl_MouseEnter(object sender, EventArgs e)
         {
@@ -35,7 +40,7 @@ namespace APK_QSigner
             browseLbl.ForeColor = Color.White;
         }
 #endregion
-
+        #region Browse "button"
         private void browseLbl_Click(object sender, EventArgs e)
         {
             apkFileDialog = new OpenFileDialog();
@@ -48,7 +53,7 @@ namespace APK_QSigner
                 GC.Collect();
             }
         }
-        
+        #endregion
         #region Drag and drop
         private void SignForm_DragEnter(object sender, DragEventArgs e)
         {
