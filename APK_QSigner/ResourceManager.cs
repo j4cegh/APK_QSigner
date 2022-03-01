@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using System.Runtime.CompilerServices;
 using APK_QSigner.Properties;
 
 namespace APK_QSigner
